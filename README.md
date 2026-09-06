@@ -1,27 +1,88 @@
-# stock-price-prediction-lstm
-Stock Price Prediction with LSTM
+# Stock Price Prediction Using LSTM
 
-Predicts next-day stock prices using LSTM networks, benchmarked against Naive and Linear Regression models. Visualizes actual vs predicted prices and computes RMSE & MAPE metrics.
+A time-series forecasting project that compares traditional machine learning approaches with an LSTM neural network for next-day stock price prediction.
 
-Tech Stack
+## Overview
 
-Python: numpy, pandas
+The project uses historical TSLA stock data to predict next-day closing prices and compares three approaches:
 
-Data: yfinance
+- Naive baseline
+- Linear Regression
+- LSTM neural network
 
-ML: scikit-learn (MinMaxScaler, LinearRegression)
+## Approach
 
-Deep Learning: tensorflow.keras (LSTM, Dense, Dropout)
+```text
+Historical Stock Data
+        ↓
+Data Preprocessing
+        ↓
+Feature Scaling
+        ↓
+Sequence Generation
+        ↓
+Model Training
+   ↙       ↓       ↘
+Naive   Linear    LSTM
+        Regression
+   ↘       ↓       ↙
+     Model Evaluation
+        ↓
+Predicted Prices
+```
 
-Visualization: matplotlib.pyplot
+## Results
 
-Results (Example: TSLA)
+| Model | RMSE |
+|---|---:|
+| Naive | 18.2 |
+| Linear Regression | 12.5 |
+| **LSTM** | **7.8** |
 
-Naive RMSE: 18.2
+The LSTM model achieved the lowest RMSE among the three approaches.
 
-Linear Regression RMSE: 12.5
+## Technologies
 
-LSTM RMSE: 7.8
+- Python
+- NumPy
+- Pandas
+- yfinance
+- Scikit-learn
+- TensorFlow / Keras
+- Matplotlib
 
-Prediction plot saved as prediction_graph.png.
+## Visualizations
 
+### TSLA Closing Price
+
+![TSLA Closing Price](TSLA%20closing%20price.png)
+
+### Actual vs Predicted
+
+![Prediction](prediction.png)
+
+### Training History
+
+![Training History](training_history.png)
+
+## Project Structure
+
+```text
+├── stock_price_prediction.ipynb
+├── TSLA closing price.png
+├── prediction.png
+├── training_history.png
+└── README.md
+```
+
+## Key Concepts
+
+- Time-series forecasting
+- LSTM neural networks
+- Feature scaling
+- Sequence generation
+- Model benchmarking
+- RMSE and MAPE evaluation
+- Stock price visualization
+
+> This project is for educational purposes and is not intended as financial advice.
