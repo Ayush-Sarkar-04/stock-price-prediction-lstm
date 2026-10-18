@@ -8,3 +8,9 @@ __pycache__/
 *.png
 baseline_results.csv
 model_comparison.csv
+returns_*.csv
+walk_forward_*.csv
+walk_forward_*.png
+returns_*.png
+*.csv
+*.png
