@@ -5,3 +5,6 @@ __pycache__/
 .pytest_cache/
 .vscode/
 .env
+*.png
+baseline_results.csv
+model_comparison.csv
